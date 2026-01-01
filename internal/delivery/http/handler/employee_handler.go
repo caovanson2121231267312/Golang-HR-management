@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 	"time"
-
+	"context"
 	"hr-management-system/internal/config"
 	"hr-management-system/internal/delivery/http/dto"
 	"hr-management-system/internal/delivery/http/middleware"
@@ -192,7 +192,11 @@ func (h *EmployeeHandler) Create(c *gin.Context) {
 		return
 	}
 
-	employeeCode := h.generateEmployeeCode(ctx)
+	employeeCode, err := h.generateEmployeeCode(ctx)
+	if err != nil {
+		response.InternalError(c, err)
+		return
+	}
 	dateOfBirth, _ := time.Parse("2006-01-02", req.DateOfBirth)
 	joinDate, _ := time.Parse("2006-01-02", req.JoinDate)
 	idIssuedDate, _ := time.Parse("2006-01-02", req.IDIssuedDate)
@@ -377,17 +381,27 @@ func (h *EmployeeHandler) Search(c *gin.Context) {
 	response.OK(c, "common.success", gin.H{"total": result.Total, "hits": result.Hits, "page": page, "size": size})
 }
 
-func (h *EmployeeHandler) generateEmployeeCode(ctx interface{}) string {
+func (h *EmployeeHandler) generateEmployeeCode(ctx context.Context) (string, error) {
 	var lastCode string
-	h.db.QueryRowContext(ctx.(interface {
-		Done() <-chan struct{}
-		Err() error
-		Value(key interface{}) interface{}
-	}), `SELECT employee_code FROM employees WHERE employee_code LIKE 'NV%' ORDER BY employee_code DESC LIMIT 1`).Scan(&lastCode)
+
+	err := h.db.QueryRowContext(ctx, `
+		SELECT employee_code
+		FROM employees
+		WHERE employee_code LIKE 'NV%'
+		ORDER BY employee_code DESC
+		LIMIT 1
+	`).Scan(&lastCode)
+
 	num := 1
-	if lastCode != "" {
+
+	if err != nil {
+		if err != sql.ErrNoRows {
+			return "", err
+		}
+	} else {
 		fmt.Sscanf(lastCode, "NV%d", &num)
 		num++
 	}
-	return fmt.Sprintf("NV%06d", num)
+
+	return fmt.Sprintf("NV%06d", num), nil
 }

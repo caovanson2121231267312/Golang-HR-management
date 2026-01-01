@@ -7,6 +7,7 @@ import (
 	"html/template"
 	"path/filepath"
 	"sync"
+	"io"
 
 	"hr-management-system/internal/config"
 
@@ -128,10 +129,11 @@ func (e *EmailService) Send(ctx context.Context, email Email) error {
 	}
 
 	for _, att := range email.Attachments {
-		m.Attach(att.Filename, gomail.SetCopyFunc(func(w gomail.Writer) error {
+		m.Attach(att.Filename, gomail.SetCopyFunc(func(w io.Writer) error {
 			_, err := w.Write(att.Content)
 			return err
 		}))
+
 	}
 
 	return e.dialer.DialAndSend(m)

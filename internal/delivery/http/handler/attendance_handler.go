@@ -80,7 +80,7 @@ func (h *AttendanceHandler) CheckIn(c *gin.Context) {
 		VALUES ($1, $2, 'check_in', $3, $4, $5, $6)
 	`, uuid.New(), attendanceID, now, clientIP, c.Request.UserAgent(), req.Location)
 
-	h.log.WithModule("attendance").WithUserID(userID).Info("Employee checked in")
+	// h.log.WithModule("attendance").WithUserID(userID).Info("Employee checked in")
 
 	response.OK(c, "attendance.check_in", gin.H{
 		"attendance_id": attendanceID,
