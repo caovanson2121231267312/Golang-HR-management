@@ -1,0 +1,117 @@
+{
+  "common": {
+    "success": "Thành công",
+    "error": "Có lỗi xảy ra",
+    "not_found": "Không tìm thấy",
+    "unauthorized": "Không có quyền truy cập",
+    "forbidden": "Truy cập bị từ chối",
+    "validation_error": "Dữ liệu không hợp lệ",
+    "internal_error": "Lỗi hệ thống",
+    "list": "Danh sách",
+    "created": "Tạo thành công",
+    "updated": "Cập nhật thành công",
+    "deleted": "Xóa thành công"
+  },
+  "auth": {
+    "login_success": "Đăng nhập thành công",
+    "login_failed": "Sai email hoặc mật khẩu",
+    "logout_success": "Đăng xuất thành công",
+    "token_invalid": "Token không hợp lệ",
+    "token_expired": "Token đã hết hạn",
+    "session_expired": "Phiên đăng nhập đã hết hạn",
+    "account_locked": "Tài khoản đã bị khóa",
+    "account_inactive": "Tài khoản chưa được kích hoạt",
+    "password_changed": "Đổi mật khẩu thành công",
+    "password_reset_sent": "Email đặt lại mật khẩu đã được gửi",
+    "password_reset_success": "Đặt lại mật khẩu thành công",
+    "password_invalid": "Mật khẩu cũ không đúng",
+    "otp_sent": "Mã OTP đã được gửi",
+    "otp_invalid": "Mã OTP không hợp lệ",
+    "otp_expired": "Mã OTP đã hết hạn",
+    "2fa_required": "Yêu cầu xác thực 2 bước",
+    "2fa_success": "Xác thực 2 bước thành công",
+    "email_verified": "Email đã được xác thực"
+  },
+  "user": {
+    "not_found": "Không tìm thấy người dùng",
+    "email_exists": "Email đã tồn tại",
+    "phone_exists": "Số điện thoại đã tồn tại",
+    "created": "Tạo người dùng thành công",
+    "updated": "Cập nhật người dùng thành công",
+    "deleted": "Xóa người dùng thành công"
+  },
+  "employee": {
+    "not_found": "Không tìm thấy nhân viên",
+    "code_exists": "Mã nhân viên đã tồn tại",
+    "created": "Tạo nhân viên thành công",
+    "updated": "Cập nhật nhân viên thành công",
+    "deleted": "Xóa nhân viên thành công"
+  },
+  "department": {
+    "not_found": "Không tìm thấy phòng ban",
+    "code_exists": "Mã phòng ban đã tồn tại",
+    "created": "Tạo phòng ban thành công",
+    "updated": "Cập nhật phòng ban thành công",
+    "deleted": "Xóa phòng ban thành công",
+    "has_employees": "Phòng ban còn nhân viên, không thể xóa"
+  },
+  "position": {
+    "not_found": "Không tìm thấy vị trí",
+    "code_exists": "Mã vị trí đã tồn tại",
+    "created": "Tạo vị trí thành công",
+    "updated": "Cập nhật vị trí thành công",
+    "deleted": "Xóa vị trí thành công"
+  },
+  "attendance": {
+    "check_in": "Chấm công vào thành công",
+    "check_out": "Chấm công ra thành công",
+    "already_checked_in": "Bạn đã chấm công vào hôm nay",
+    "already_checked_out": "Bạn đã chấm công ra hôm nay",
+    "not_checked_in": "Bạn chưa chấm công vào",
+    "approved": "Phê duyệt chấm công thành công"
+  },
+  "leave": {
+    "not_found": "Không tìm thấy đơn nghỉ phép",
+    "created": "Tạo đơn nghỉ phép thành công",
+    "approved": "Phê duyệt đơn nghỉ phép thành công",
+    "rejected": "Từ chối đơn nghỉ phép thành công",
+    "cancelled": "Hủy đơn nghỉ phép thành công",
+    "insufficient_balance": "Số ngày phép không đủ",
+    "already_processed": "Đơn nghỉ phép đã được xử lý"
+  },
+  "overtime": {
+    "not_found": "Không tìm thấy đề xuất tăng ca",
+    "created": "Tạo đề xuất tăng ca thành công",
+    "approved": "Phê duyệt tăng ca thành công",
+    "rejected": "Từ chối tăng ca thành công",
+    "cancelled": "Hủy đề xuất tăng ca thành công",
+    "exceeded_limit": "Vượt quá giới hạn giờ tăng ca"
+  },
+  "payroll": {
+    "not_found": "Không tìm thấy kỳ lương",
+    "period_exists": "Kỳ lương đã tồn tại",
+    "created": "Tạo kỳ lương thành công",
+    "calculated": "Tính lương thành công",
+    "approved": "Phê duyệt bảng lương thành công",
+    "paid": "Thanh toán lương thành công",
+    "already_processed": "Kỳ lương đã được xử lý"
+  },
+  "role": {
+    "not_found": "Không tìm thấy vai trò",
+    "slug_exists": "Mã vai trò đã tồn tại",
+    "created": "Tạo vai trò thành công",
+    "updated": "Cập nhật vai trò thành công",
+    "deleted": "Xóa vai trò thành công",
+    "system_role": "Không thể xóa vai trò hệ thống"
+  },
+  "validation": {
+    "required": "Trường này là bắt buộc",
+    "email": "Email không hợp lệ",
+    "min_length": "Độ dài tối thiểu là %d ký tự",
+    "max_length": "Độ dài tối đa là %d ký tự",
+    "password_weak": "Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường và số"
+  },
+  "rate_limit": {
+    "exceeded": "Quá nhiều yêu cầu, vui lòng thử lại sau"
+  }
+}

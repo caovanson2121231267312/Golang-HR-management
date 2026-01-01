@@ -1,0 +1,117 @@
+{
+  "common": {
+    "success": "Success",
+    "error": "An error occurred",
+    "not_found": "Not found",
+    "unauthorized": "Unauthorized",
+    "forbidden": "Access denied",
+    "validation_error": "Validation error",
+    "internal_error": "Internal server error",
+    "list": "List",
+    "created": "Created successfully",
+    "updated": "Updated successfully",
+    "deleted": "Deleted successfully"
+  },
+  "auth": {
+    "login_success": "Login successful",
+    "login_failed": "Invalid email or password",
+    "logout_success": "Logout successful",
+    "token_invalid": "Invalid token",
+    "token_expired": "Token has expired",
+    "session_expired": "Session has expired",
+    "account_locked": "Account is locked",
+    "account_inactive": "Account is not activated",
+    "password_changed": "Password changed successfully",
+    "password_reset_sent": "Password reset email has been sent",
+    "password_reset_success": "Password reset successful",
+    "password_invalid": "Current password is incorrect",
+    "otp_sent": "OTP has been sent",
+    "otp_invalid": "Invalid OTP",
+    "otp_expired": "OTP has expired",
+    "2fa_required": "Two-factor authentication required",
+    "2fa_success": "Two-factor authentication successful",
+    "email_verified": "Email has been verified"
+  },
+  "user": {
+    "not_found": "User not found",
+    "email_exists": "Email already exists",
+    "phone_exists": "Phone number already exists",
+    "created": "User created successfully",
+    "updated": "User updated successfully",
+    "deleted": "User deleted successfully"
+  },
+  "employee": {
+    "not_found": "Employee not found",
+    "code_exists": "Employee code already exists",
+    "created": "Employee created successfully",
+    "updated": "Employee updated successfully",
+    "deleted": "Employee deleted successfully"
+  },
+  "department": {
+    "not_found": "Department not found",
+    "code_exists": "Department code already exists",
+    "created": "Department created successfully",
+    "updated": "Department updated successfully",
+    "deleted": "Department deleted successfully",
+    "has_employees": "Department has employees, cannot delete"
+  },
+  "position": {
+    "not_found": "Position not found",
+    "code_exists": "Position code already exists",
+    "created": "Position created successfully",
+    "updated": "Position updated successfully",
+    "deleted": "Position deleted successfully"
+  },
+  "attendance": {
+    "check_in": "Check-in successful",
+    "check_out": "Check-out successful",
+    "already_checked_in": "You have already checked in today",
+    "already_checked_out": "You have already checked out today",
+    "not_checked_in": "You have not checked in yet",
+    "approved": "Attendance approved successfully"
+  },
+  "leave": {
+    "not_found": "Leave request not found",
+    "created": "Leave request created successfully",
+    "approved": "Leave request approved successfully",
+    "rejected": "Leave request rejected successfully",
+    "cancelled": "Leave request cancelled successfully",
+    "insufficient_balance": "Insufficient leave balance",
+    "already_processed": "Leave request has already been processed"
+  },
+  "overtime": {
+    "not_found": "Overtime request not found",
+    "created": "Overtime request created successfully",
+    "approved": "Overtime approved successfully",
+    "rejected": "Overtime rejected successfully",
+    "cancelled": "Overtime request cancelled successfully",
+    "exceeded_limit": "Exceeded overtime hours limit"
+  },
+  "payroll": {
+    "not_found": "Payroll period not found",
+    "period_exists": "Payroll period already exists",
+    "created": "Payroll period created successfully",
+    "calculated": "Payroll calculated successfully",
+    "approved": "Payroll approved successfully",
+    "paid": "Payroll paid successfully",
+    "already_processed": "Payroll period has already been processed"
+  },
+  "role": {
+    "not_found": "Role not found",
+    "slug_exists": "Role slug already exists",
+    "created": "Role created successfully",
+    "updated": "Role updated successfully",
+    "deleted": "Role deleted successfully",
+    "system_role": "Cannot delete system role"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Invalid email format",
+    "min_length": "Minimum length is %d characters",
+    "max_length": "Maximum length is %d characters",
+    "password_weak": "Password must be at least 8 characters with uppercase, lowercase and numbers"
+  },
+  "rate_limit": {
+    "exceeded": "Too many requests, please try again later"
+  }
+}
